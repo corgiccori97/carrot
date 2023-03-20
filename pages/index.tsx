@@ -79,7 +79,52 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='bg-white p-6 rounded-3xl shadow-xl'></div>
+      <div className="bg-slate-100 h-screen">
+        <div className="bg-yellow-300 rounded-3xl w-2/4 mx-auto my-auto px-5 pt-80 shadow-2xl">
+          <div className="border-b-2 border-black">
+            <span className="font-semibold">Select Destination</span>
+          </div>
+          <div className="font-extrabold text-3xl mt-4 pb-4">
+            <ul>
+              <li className="mb-4 hover:text-white flex text-center">
+                <span className="text-sm bg-black text-yellow-300 p-2 rounded-full mr-3
+                hover:bg-white w-8">V</span>
+                <span>Vancouver</span>
+              </li>
+              <li className="mb-4 hover:text-white flex text-center">
+                <span className="text-sm bg-black text-yellow-300 p-2 rounded-full mr-3
+                hover:bg-white w-8">S</span>
+                <span>Seattle</span>
+              </li>
+              <li className="mb-4 hover:text-white flex text-center">
+                <span className="text-sm bg-black text-yellow-300 p-2 rounded-full mr-3
+                hover:bg-white w-8">P</span>
+                <span>Portland</span>
+              </li>
+              <li className="mb-4 hover:text-white flex text-center">
+                <span className="text-sm bg-black text-yellow-300 p-2 rounded-full mr-3
+                hover:bg-white w-8">S</span>
+                <span>Seattle</span>
+              </li>
+              <li className="mb-4 hover:text-white flex text-center">
+                <span className="text-sm bg-black text-yellow-300 p-2 rounded-full mr-3
+                hover:bg-white w-8">S</span>
+                <span>San Francisco</span>
+              </li>
+              <li className="mb-4 hover:text-white flex text-center">
+                <span className="text-sm bg-black text-yellow-300 p-2 rounded-full mr-3
+                hover:bg-white w-8">L</span>
+                <span>Los Angeles</span>
+              </li>
+              <li className="mb-2 hover:text-white flex text-center">
+                <span className="text-sm bg-black text-yellow-300 p-2 rounded-full mr-3
+                hover:bg-white w-8">S</span>
+                <span>San Diego</span>
+              </li>
+            </ul>
+          </div>
+      </div>
+      </div>
     </div>
   )
 }
