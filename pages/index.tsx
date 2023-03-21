@@ -7,14 +7,24 @@ export default function Home() {
     <div className='bg-slate-400 py-20 px-20 grid gap-10 min-h-screen'>
       <div className='bg-white p-6 rounded-3xl shadow-xl'>
         <h2 className='font-semibold text-3xl'>Select Item</h2>
-        <div className='flex justify-between my-2'>
-          <span className='text-gray-500'>Grey Chair</span>
-          <span className='font-semibold'>$100</span>
-        </div>
-        <div className='flex justify-between'>
-          <span className='text-gray-500'>Grey Chair</span>
-          <span className='font-semibold'>$120</span>
-        </div>
+        <ul>
+          {[1, 2, 3, 4].map(i => (
+            <div key={i} className="flex justify-between my-2 
+            odd:bg-blue-50
+            even:bg-yellow-50 
+            first-of-type:bg-teal-50
+            last-of-type:bg-slate-50">
+              <span className='text-gray-500'>Grey Chair</span>
+              <span className='font-semibold'>$19</span>
+            </div>
+          ))}
+        </ul>
+        <ul>
+          {["a", "b", "c", ""].map((c, i) => (
+            <li className='bg-red-500 py-2 
+            empty:hidden'>{c}</li>
+          ))}
+        </ul>
         <div className='flex justify-between mt-2 pt-2 border-t-2 border-dashed'>
           <span>Total</span>
           <span className='font-semibold'>$220</span>
@@ -24,7 +34,7 @@ export default function Home() {
         active:bg-yellow-200
         focus:bg-red-500'>Checkout</button>
       </div>
-      <div className="bg-white overflow-hidden rounded-3xl shadow-xl">
+      <div className="bg-white overflow-hidden rounded-3xl shadow-xl group">
         <div className="bg-blue-500 p-6 pb-14">
           <span className="text-white text-2xl">Profile</span>
         </div>
@@ -34,7 +44,8 @@ export default function Home() {
               <span className="text-sm text-gray-500">Orders</span>
               <span className="font-medium">340</span>
             </div>
-            <div className="h-24 w-24 bg-yellow-200 rounded-full" />
+            <div className="h-24 w-24 bg-yellow-200 rounded-full
+            group-hover:bg-red-300 transition-colors" />
             <div className="flex flex-col items-center">
               <span className="text-sm text-gray-500">Spent</span>
               <span className="font-medium">$340</span>
@@ -124,6 +135,16 @@ export default function Home() {
             </ul>
           </div>
       </div>
+      </div>
+      <div className="bg-slate-100 p-6 rounded-3xl shadow-xl">
+        <h3>💥 peer와 form</h3>
+        <form>
+          <input type="text" required placeholder="username" className='border p-1 peer border-gray-400 rounded-md' />
+          <span className='hidden peer-invalid:block peer-invalid:text-red-500'>This input is invalid</span>
+          <span className='hidden peer-valid:block peer-valid:text-teal-500'>Awesome username</span>
+          <span className='hidden peer-hover:block peer-hover:text-amber-500'>Hovered</span>
+          <input type="submit" value="Login" className='bg-white' />
+        </form>
       </div>
     </div>
   )
