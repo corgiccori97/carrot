@@ -1,6 +1,9 @@
+import Layout from '@components/layout';
+
 export default function Chats() {
     return (
-    <div className="py-10 divide-y-[1px] ">
+    <Layout title={"채팅"} hasTabBar>
+    <div className="py-4 divide-y-[1px]">
     {[...Array(10)].map((_, i) => (
         <div
         key={i}
@@ -16,5 +19,6 @@ export default function Chats() {
         </div>
     ))}
     </div>
+    </Layout>
     );
 }

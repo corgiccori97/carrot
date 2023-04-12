@@ -1,5 +1,8 @@
+import Layout from '@components/layout';
+
 export default function Community() {
     return (
+    <Layout title={"동네생활"} hasTabBar>
     <div>
         <div className='py-10 space-y-8'>
         <span className='inline-flex my-3 ml-4 items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800'>동네질문</span>
@@ -64,5 +67,6 @@ export default function Community() {
         </svg>
         </button>
     </div>
+    </Layout>
     );
 }
