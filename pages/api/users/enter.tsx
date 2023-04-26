@@ -12,7 +12,7 @@ async function handler(req: NextApiRequest, res:NextApiResponse) {
         create: {
             name: "Anonymous",
             ...(phone && { phone: +phone }),
-            ...(email && { email })
+            ...(email && { email }) 
         },
         update:{},
     });

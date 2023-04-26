@@ -23,3 +23,5 @@ const Chats:NextPage = () => {
       </Layout>
     );
 }
+
+export default Chats;
